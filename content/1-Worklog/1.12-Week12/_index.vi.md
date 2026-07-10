@@ -1,58 +1,38 @@
 ---
-title: "Worklog Tuần 12"
-date: 2024-01-01
-weight: 2
+title: "Nhật ký tuần 12 - Hoàn thiện Đồ án & Tổng duyệt Worklog"
+date: 2026-07-03
+weight: 12
 chapter: false
-pre: " <b> 1.12 </b> "
+pre: " <b> 1.12. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-### Mục tiêu tuần 12:
+### Chủ đề tuần
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+Tập trung hoàn thiện các khâu kỹ thuật cuối cùng của Đồ án thực tập và rà soát, đóng gói toàn bộ website báo cáo Worklog (Hugo).
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Mục tiêu tuần
 
+* Xử lý dứt điểm các lỗi (bugs) còn tồn đọng trong Đồ án và dọn dẹp tài nguyên.
+* Viết tài liệu hướng dẫn (Documentation) chi tiết cho hệ thống vừa xây dựng.
+* Rà soát, chuẩn hóa lại toàn bộ các file định dạng Markdown từ Tuần 1 đến Tuần 12.
+* Kiểm tra giao diện website Hugo, đảm bảo các link hoạt động tốt trước khi nộp.
 
-### Kết quả đạt được tuần 12:
+### Lịch công việc
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+| Ngày | Thứ | Nội dung công việc | Lab / Dự án |
+|---|---|---|---|
+| 06/07/2026 | Thứ 2 | Rà soát lần cuối, hoàn thiện đồ án. | Hoàn thiện Đồ án |
+| 07/07/2026 | Thứ 3 | Viết tài liệu (README) giải thích chi tiết luồng hoạt động, cấu hình mạng và cách triển khai kiến trúc của Final Project. | Viết Document |
+| 08/07/2026 | Thứ 4 | Tổng duyệt lại toàn bộ Nhật ký công việc (Worklog) từ Tuần 1 đến Tuần 11, sửa lỗi chính tả và fix các lỗi hiển thị Markdown. | Rà soát Worklog |
+| 09/07/2026 | Thứ 5 | Viết Nhật ký Tuần 12. Build thử website Hugo ở local, test các đường link bài Blog và ảnh minh họa đảm bảo không bị lỗi (404). | Tối ưu Website |
+| 10/07/2026 | Thứ 6 | Dọn dẹp triệt để tài nguyên AWS (Terminate EC2, Xóa RDS, NAT Gateway) tránh phát sinh phí. Push code lên GitHub và nộp link. | Nộp báo cáo |
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+### Kết quả kỳ vọng
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Đồ án có đầy đủ minh chứng hoạt động và tài liệu kỹ thuật rõ ràng.
+* Trang web báo cáo Worklog hiển thị chuyên nghiệp, sạch sẽ, không có lỗi định dạng, sẵn sàng cho việc nghiệm thu quá trình thực tập.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+### Tham chiếu tuần 12
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Cấu trúc thư mục của Hugo Framework.
+* Tài liệu Markdown Cheat Sheet.

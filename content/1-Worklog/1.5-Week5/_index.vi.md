@@ -1,59 +1,35 @@
 ---
-title: "Worklog Tuần 5"
-date: 2024-01-01
-weight: 1
+title: "Nhật ký tuần 5 - Module 5: Cơ sở dữ liệu đám mây Amazon RDS"
+date: 2026-05-15
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Chủ đề tuần
 
-### Mục tiêu tuần 5:
+Sử dụng dịch vụ Managed Database để loại bỏ gánh nặng vận hành OS, tập trung vào bảo mật tầng dữ liệu.
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Mục tiêu tuần
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+* Khởi tạo máy chủ Amazon RDS (MySQL/PostgreSQL) an toàn trong Private Subnet.
+* Đảm bảo tính khả dụng (High Availability) bằng tùy chọn Multi-AZ.
+* Cấu hình Security Group cho phép EC2 đọc/ghi vào Database.
 
+### Lịch công việc
 
-### Kết quả đạt được tuần 5:
+| Ngày | Thứ | Nội dung công việc | Lab / Dự án |
+|---|---|---|---|
+| 18/05/2026 | Thứ 2 | Khởi tạo Subnet Group bao gồm các Private Subnet trải đều trên nhiều vùng AZ khác nhau. | Cấu hình Network |
+| 19/05/2026 | Thứ 3 | Tạo phiên bản Amazon RDS MySQL, cấu hình Master Password và vô hiệu hóa Public Access. | [Lab 000015 - Triển khai Amazon RDS](https://000015.awsstudygroup.com) |
+| 20/05/2026 | Thứ 4 | Thiết lập Security Group RDS: Chỉ chấp nhận lưu lượng port 3306 đến từ Security Group của EC2 Web Server. | Network Security |
+| 21/05/2026 | Thứ 5 | Đứng từ EC2, dùng MySQL Client kết nối thử vào Endpoint của RDS. Tạo Snapshot sao lưu nhanh và dọn dẹp. | [Lab 000015 - Triển khai Amazon RDS](https://000015.awsstudygroup.com) |
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+### Kết quả kỳ vọng
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Cơ sở dữ liệu được cách ly tuyệt đối, không thể truy cập trực tiếp từ Internet.
+* Giao tiếp thành công tuyến đường nội bộ an toàn giữa tầng Compute và tầng Database.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+### Tham chiếu tuần 5
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* [Lab 000015 - Khởi tạo và thiết lập Cơ sở dữ liệu Amazon RDS](https://000015.awsstudygroup.com)

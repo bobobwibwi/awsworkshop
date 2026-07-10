@@ -1,126 +1,138 @@
 ---
-title: "Event 1"
-date: 2024-01-01
+title: "Event 1 - Prompt Engineering, AI Mind Mapping & BMAD Method"
+date: 2026-05-09
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
+| Information | Details |
+|---|---|
+| Date | 09/05/2026 |
+| Location | 26th Floor, Bitexco Financial Tower, Saigon Ward, Ho Chi Minh City |
+| Role | Attendee |
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+This page summarizes the content from the event, which covers three main topics: Automated Prompt Engineering, a mind map on effective AI interaction, and the BMAD development method.
 
-### Event Objectives
+---
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+### 1. Introduction
 
-### Speakers
+This document compiles content from various sources, including:
+- Presentation: **“Automated Prompt Engineering: Enhancing LLM Output Quality”**
+- Mind map: **“Effective AI Interaction & AWS Application Architecture”**
+- AI development framework: **BMAD (Build More Architect Dreams)**
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+---
 
-### Key Highlights
+### 2. Detailed Content
 
-#### Identifying the drawbacks of legacy application architecture
+#### 2.1 Presentation: Automated Prompt Engineering
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+**Speaker: Nguyen Tuan Thinh**
 
-#### Transitioning to modern application architecture – Microservices
+This presentation explains the importance of prompt engineering when working with Large Language Models (LLMs), while providing principles and tools to improve output quality.
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+**Why Prompt Engineering is important:**
+- Overly generic prompts often yield poor results
+- Wasting tokens
+- Vague instructions reduce quality and productivity
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+**Components of an effective prompt:**
 
-#### Domain-Driven Design (DDD)
+| Component | Description |
+|---|---|
+| Role | Defines a persona or role for the AI |
+| Instructions | What the AI needs to perform |
+| Context | Necessary background information |
+| Input Data | The data that needs to be processed |
+| Output Format | The desired presentation of the result |
+| Examples | Sample input and output patterns |
+| Constraints | Limits and rules to follow |
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+**Guidelines for writing prompts:**
+- Clear and specific
+- Use direct, imperative language
+- Describe exactly what needs to be done
+- Allow the model to answer "I don't know" when necessary
+- Break down long tasks into steps
 
-#### Event-Driven Architecture
+**Token economy:**
+- Tokens are the processing units of LLMs
+- Costs are calculated based on input and output tokens
+- Costs vary by language, and Vietnamese typically consumes more tokens than English
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+**Advanced techniques:**
+- Chain-of-Thought (CoT): step-by-step reasoning
+- Tree-of-Thoughts (ToT): building multiple reasoning branches
+- Self-Consistency: comparing multiple reasoning paths to select the best answer
+- Retrieval-Augmented Generation (RAG): augmenting knowledge from external sources
+- Role Prompting: assigning a specific role to the model
 
-#### Compute Evolution
+**Tool - Proptimizer:**
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
+A browser extension that helps automate prompt optimization based on AWS serverless architecture:
+CloudFront -> S3 -> Cognito -> API Gateway -> Lambda -> Bedrock -> DynamoDB -> CloudWatch
 
-#### Amazon Q Developer
+---
 
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+#### 2.2 Mind Map: Effective AI Interaction & AWS Application Architecture
 
-### Key Takeaways
+**Optimizing interaction with AI:**
+- Use the KFC (Knowledge, Format, Constraints) framework to provide clear context, formats, and constraints
 
-#### Design Mindset
+**Recommended approaches:**
+- Break down tasks
+- Ask AI to suggest options
+- Compare multiple alternatives
+- Supplement with structured data
 
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
+**Advanced AI techniques:**
+- Apply CoT, ToT, Self-Consistency, RAG, and Role Prompting to improve results
 
-#### Technical Architecture
+**AWS Architecture (Serverless):**
+CloudFront, S3, Cognito, API Gateway, Lambda, Bedrock, DynamoDB, CloudWatch
 
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
+---
 
-#### Modernization Strategy
+#### 2.3 BMAD Method (Build More Architect Dreams)
 
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
+BMAD is an open-source, free, AI-oriented development framework that helps teams build solutions following a clearly structured process.
 
-### Applying to Work
+**Key features:**
+- Phases: Analysis -> Planning -> Architecture -> Implementation
+- Over 12 specialized agents assisting users at each step
+- Agile practices integration
+- AI assistant: `bmad-help`
+- Party Mode for multi-agent collaboration
 
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+**Core modules:**
 
-### Event Experience
+| Module | Description |
+|---|---|
+| BMM | Core framework - 34 processes |
+| BMB | Custom agent builder |
+| TEA | Testing and automation |
+| BMGD | Game development |
+| CIS | Innovation and design thinking |
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
+**Quick installation (requires Node.js 20+, Python 3.10+, and `uv`):**
+```bash
+npx bmad-method install
+```
 
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
+**Community support:** Discord, YouTube, X/Twitter
 
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
+---
 
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
+### 3. Event Photos
 
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
+Below are photos captured during the event:
 
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
+![Event 1 Photo](/awsportfolio/images/4-Event/4.1-event1/event1-photo.jpg?width=40pc&classes=shadow)
 
-#### Some event photos
-*Add your event photos here*  
+---
 
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+### 4. Conclusion
+
+This event clearly presented three distinct areas of content: prompt engineering, AI interaction frameworks, and the BMAD development method. Since each section has different objectives and origins, separating the content makes it easier for readers to understand and apply. Overall, this is a highly useful set of knowledge for working more effectively with AI systems and AWS cloud architectures.

@@ -1,59 +1,37 @@
 ---
-title: "Worklog Tuần 3"
-date: 2024-01-01
-weight: 1
+title: "Nhật ký tuần 3 - Module 3: Kiến trúc mạng chuyên sâu Amazon VPC"
+date: 2026-05-01
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Chủ đề tuần
 
-### Mục tiêu tuần 3:
+Xây dựng kiến trúc mạng ảo chuyên biệt, kiểm soát luồng định tuyến và cho phép Private Subnet giao tiếp Internet an toàn.
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Mục tiêu tuần
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+* Xây dựng Custom VPC với việc chia chẻ các dải IP (CIDR block).
+* Phân bổ Route Tables cho Public và Private Subnet.
+* Triển khai NAT Gateway để kéo gói cập nhật hệ thống một cách bảo mật.
 
+### Lịch công việc
 
-### Kết quả đạt được tuần 3:
+| Ngày | Thứ | Nội dung công việc | Lab / Dự án |
+|---|---|---|---|
+| 04/05/2026 | Thứ 2 | Phân hoạch dải IP. Khởi tạo một Custom VPC chứa cả lớp Public Subnet và Private Subnet. | [Lab 000006 - Xây dựng Advanced VPC](https://000006.awsstudygroup.com) |
+| 05/05/2026 | Thứ 3 | Cấu hình Internet Gateway (IGW). Chỉnh sửa Route Table cho Public Subnet trỏ đường truyền ra IGW. | [Lab 000006 - Xây dựng Advanced VPC](https://000006.awsstudygroup.com) |
+| 06/05/2026 | Thứ 4 | Tạo các EC2 instance đóng vai trò Frontend (Public) và Backend (Private) để test phân lớp mạng. | Cloud Lab Environment |
+| 07/05/2026 | Thứ 5 | Xin cấp Elastic IP. Tạo NAT Gateway tại Public Subnet và trỏ Route Table của Private Subnet ra NAT. | [Lab 000007 - NAT Gateway & Routing](https://000007.awsstudygroup.com) |
+| 08/05/2026 | Thứ 6 | Troubleshooting sự cố: Chạy ping test từ máy Backend ra Internet qua NAT Gateway, trace route luồng traffic. | Troubleshooting |
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+### Kết quả kỳ vọng
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Hoàn thiện lab hạ tầng mạng cô lập với độ bảo mật cao.
+* Đảm bảo server nội bộ ẩn mình hoàn toàn trước Internet nhưng vẫn kéo được các bản vá lỗi (patching).
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+### Tham chiếu tuần 3
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* [Lab 000006 - Thiết kế mạng ảo nâng cao Amazon VPC](https://000006.awsstudygroup.com)
+* [Lab 000007 - Thiết lập định tuyến an toàn với NAT Gateway](https://000007.awsstudygroup.com)

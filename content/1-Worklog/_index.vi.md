@@ -1,40 +1,31 @@
 ---
 title: "Nhật ký công việc"
-date: 2024-01-01
+date: 2026-07-09
 weight: 1
 chapter: false
 pre: " <b> 1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+**Tuần 1:** [Thiết lập tài khoản AWS, quản trị phân quyền IAM, nghiên cứu dịch vụ mạng Amazon VPC cơ bản và phác thảo sơ đồ kiến trúc HLA trên draw.io.](1.1-week1/)
 
-**Trong trang này** bạn sẽ cần giới thiệu worklog của bạn **như thế nào**? Bạn hoàn thành chương trình trong vòng **bao nhiêu tuần**? Bạn **đã làm gì** trong các tuần đó?
+**Tuần 2:** [Triển khai máy chủ ảo Amazon EC2 Linux, viết kịch bản User Data tự động cài đặt Apache Web Server và thực hành mount ổ cứng ảo Amazon EBS.](1.2-week2/)
 
+**Tuần 3:** [Xây dựng kiến trúc mạng Custom VPC chuyên sâu, phân chia Public/Private Subnets, cấu hình Internet Gateway và triển khai NAT Gateway bảo mật.](1.3-week3/)
 
-Thông thường và cũng là tiêu chuẩn, một worklog được thực hiện trong khoảng 3 tháng (trong suốt thời gian thực tập) với nội dung các tuần như sau:
+**Tuần 4:** [Quản trị kho lưu trữ đối tượng Amazon S3, kích hoạt tính năng Versioning bảo vệ dữ liệu và cấu hình Policy để triển khai Static Website Hosting.](1.4-week4/)
 
-**Tuần 1:** [Làm quen với AWS và các dịch vụ cơ bản trong AWS](1.1-week1/)
+**Tuần 5:** [Khởi tạo hệ quản trị cơ sở dữ liệu Managed Database với Amazon RDS trong phân lớp mạng cô lập Private Subnet và cấu hình tính năng độ khả dụng cao Multi-AZ.](1.5-week5/)
 
-**Tuần 2:** [Làm công việc A...](1.2-week2/)
+**Tuần 6:** [Giải quyết bài toán thắt cổ chai hiệu suất bằng cách đóng gói AMI, tạo Launch Template, cấu hình Application Load Balancer (ALB) và thiết lập Auto Scaling Group (ASG).](1.6-week6/)
 
-**Tuần 3:** [Làm công việc B...](1.3-week3/)
+**Tuần 7:** [Tích hợp bộ công cụ giám sát hệ thống với CloudWatch Metrics, cấu hình Amazon SNS gửi email cảnh báo tự động và bật VPC Flow Logs để phân tích luồng mạng.](1.7-week7/)
 
-**Tuần 4:** [Làm công việc C...](1.4-week4/)
+**Tuần 8:** [Hệ thống hóa kiến thức chặng 1 về Hạ tầng mạng & Điện toán, tự thiết lập lại môi trường AWS cloud laboratory chuyên biệt và rèn luyện kỹ năng khắc phục sự cố mạng (Network Troubleshooting).](1.8-week8/)
 
-**Tuần 5:** [Làm công việc D...](1.5-week5/)
+**Tuần 9:** [Ôn tập nâng cao chặng 2 về Lưu trữ, Co giãn & Giám sát; thực hành phân tích nhật ký mạng (VPC Flow Logs) bị REJECT và thiết lập hệ thống cảnh báo tự động khi quá tải tài nguyên.](1.9-week9/)
 
-**Tuần 6:** [Làm công việc E...](1.6-week6/)
+**Tuần 10:** [Nghiên cứu các mẫu kiến trúc hạ tầng tiêu chuẩn của AWS, phác thảo sơ đồ High Level Architecture (HLA) chi tiết trên draw.io và hoàn thiện tài liệu Đề xuất Đồ án (Proposal) gửi mentor phê duyệt.](1.10-week10/)
 
-**Tuần 7:** [Làm công việc G...](1.7-week7/)
+**Tuần 11:** [Thực thi triển khai hạ tầng Đồ án thực tập cuối khóa trên môi trường AWS thực tế theo tư duy bảo mật kín kẽ, cô lập các rủi ro lây lan theo chiều ngang và kiểm thử khả năng chịu tải của hệ thống.](1.11-week11/)
 
-**Tuần 8:** [Làm công việc H...](1.8-week8/)
-
-**Tuần 9:** [Làm công việc I...](1.9-week9/)
-
-**Tuần 10:** [Làm công việc L...](1.10-week10/)
-
-**Tuần 11:** [Làm công việc M...](1.11-week11/)
-
-**Tuần 12:** [Làm công việc N...](1.12-week12/)
+**Tuần 12:** [Rà soát lần cuối hoàn thiện đồ án, viết tài liệu hướng dẫn kỹ thuật (README), tổng duyệt toàn bộ Nhật ký công việc từ Tuần 1 đến Tuần 12 để tối ưu hóa hiển thị trên website Hugo và dọn dẹp tài nguyên.](1.12-week12/)

@@ -1,59 +1,36 @@
 ---
-title: "Worklog Tuần 9"
-date: 2024-01-01
-weight: 1
+title: "Nhật ký tuần 9 - Ôn tập chặng 2: Lưu trữ, Co giãn & Giám sát"
+date: 2026-06-12
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Chủ đề tuần
 
-### Mục tiêu tuần 9:
+Hoàn thiện việc ôn tập các kỹ thuật nâng cao về Database, chịu tải (Scaling) và giám sát luồng dữ liệu mạng.
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Mục tiêu tuần
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+* Ôn tập các luồng kết nối an toàn cho S3 và RDS.
+* Thực hành lại cơ chế Load Balancer và Auto Scaling Group.
+* Áp dụng CloudWatch và VPC Flow Logs vào kịch bản thực tế.
 
+### Lịch công việc
 
-### Kết quả đạt được tuần 9:
+| Ngày | Thứ | Nội dung công việc | Lab / Dự án |
+|---|---|---|---|
+| 15/06/2026 | Thứ 2 | Ôn tập S3 & RDS: Thiết lập Static Website và cấu hình RDS Multi-AZ kết nối với EC2 qua lớp mạng Private. | Ôn tập Lab 5 |
+| 16/06/2026 | Thứ 3 | Cấu hình lại luồng ALB kết hợp Auto Scaling Group. Dùng công cụ stress test để kiểm tra khả năng scale-out tự động. | Ôn tập Lab 6 |
+| 17/06/2026 | Thứ 4 | Phân tích VPC Flow Logs: Truy xuất và đọc hiểu các log traffic bị REJECT để nhận diện các IP có hành vi quét port. | Ôn tập Lab 7 |
+| 18/06/2026 | Thứ 5 | Thiết lập CloudWatch Alarm và tích hợp SNS để tự động bắn email khi server vượt mức 80% CPU. | Hệ thống Cảnh báo |
+| 19/06/2026 | Thứ 6 | Dọn dẹp sạch sẽ (Clean up) toàn bộ môi trường Lab ôn tập của 2 tuần qua để cắt giảm chi phí. | Clean up |
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+### Kết quả kỳ vọng
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Nắm vững cách thiết kế một hệ thống High Availability (HA) hoàn chỉnh, từ Frontend phân tải đến Backend cơ sở dữ liệu.
+* Làm chủ được bộ công cụ giám sát, sẵn sàng ứng dụng vào Đồ án.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+### Tham chiếu tuần 9
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Tài liệu hướng dẫn Auto Scaling & AWS CloudWatch.

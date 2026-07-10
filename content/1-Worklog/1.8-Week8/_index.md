@@ -1,57 +1,37 @@
 ---
-title: "Week 8 Worklog"
-date: 2024-01-01
-weight: 1
+title: "Week 8 Worklog - Review Stage 1: Network & Compute Infrastructure"
+date: 2026-06-05
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+### Weekly Topic
 
-### Week 8 Objectives:
+Systematize the core AWS services including Compute, Network, and Security to reinforce the foundation before starting the final project.
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+### Weekly Objectives
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+* Review knowledge of IAM, EC2, EBS, and VPC.
+* Redo key labs, operating smoothly without looking at instructions.
+* Practice network troubleshooting skills.
 
+### Work Schedule
 
-### Week 8 Achievements:
+| Date | Day | Task Content | Lab / Project |
+|---|---|---|---|
+| 08/06/2026 | Monday | Review IAM & EC2: Check Least Privilege authorization principles, recreate EC2 with User Data script. | Review Lab 1 & 2 |
+| 09/06/2026 | Tuesday | Set up a specialized AWS cloud laboratory environment from scratch, including complete VPC, EC2 instances, and NAT Gateway. | Practical Architecture |
+| 10/06/2026 | Wednesday | Review Route Tables configuration to ensure traffic flows in the right direction and is completely secure through the Private network. | Review Lab 4 |
+| 11/06/2026 | Thursday | Create network error scenarios (e.g., misconfigured Security Groups, blocked Ports) and investigate, fix the errors. | Troubleshooting |
+| 12/06/2026 | Friday | Summarize common errors during infrastructure configuration, document them in personal notes for experience. | Documentation |
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+### Expected Results
 
-* Successfully created and configured an AWS Free Tier account.
+* Fill all knowledge gaps regarding core Network and Compute services.
+* Confidently handle network connection errors (Timeout, Connection Refused) by reviewing Security Groups and Route Tables.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+### Week 8 References
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* First Cloud AI Journey review roadmap.
+* Personal architecture diagrams on draw.io.

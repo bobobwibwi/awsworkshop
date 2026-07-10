@@ -1,57 +1,36 @@
 ---
-title: "Week 9 Worklog"
-date: 2024-01-01
-weight: 1
+title: "Week 9 Worklog - Review Stage 2: Storage, Auto Scaling & Monitoring"
+date: 2026-06-12
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+### Weekly Topic
 
-### Week 9 Objectives:
+Complete the review of advanced techniques in Database, Auto Scaling, and network traffic monitoring.
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+### Weekly Objectives
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+* Review secure connection flows for S3 and RDS.
+* Redo the Load Balancer and Auto Scaling Group mechanics.
+* Apply CloudWatch and VPC Flow Logs in real-world scenarios.
 
+### Work Schedule
 
-### Week 9 Achievements:
+| Date | Day | Task Content | Lab / Project |
+|---|---|---|---|
+| 15/06/2026 | Monday | Review S3 & RDS: Set up a Static Website and configure RDS Multi-AZ connecting to EC2 via Private subnets. | Review Lab 5 |
+| 16/06/2026 | Tuesday | Reconfigure ALB combined with Auto Scaling Group. Use stress test tools to verify the automatic scale-out capability. | Review Lab 6 |
+| 17/06/2026 | Wednesday | Analyze VPC Flow Logs: Retrieve and understand REJECT traffic logs to identify port-scanning IP behaviors. | Review Lab 7 |
+| 18/06/2026 | Thursday | Set up CloudWatch Alarm and integrate SNS to automatically send emails when the server CPU usage exceeds 80%. | Alerting System |
+| 19/06/2026 | Friday | Thoroughly clean up all lab environments from the past 2 weeks to reduce costs. | Clean up |
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+### Expected Results
 
-* Successfully created and configured an AWS Free Tier account.
+* Master the design of a complete High Availability (HA) system, from Frontend load distribution to Backend databases.
+* Master the monitoring toolset, ready to apply to the Final Project.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+### Week 9 References
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Auto Scaling & AWS CloudWatch documentation guides.

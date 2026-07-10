@@ -1,31 +1,37 @@
 ---
-title: "Blog 2"
-date: 2024-01-01
-weight: 1
+title: "Blog 2: Kiểm soát truy cập an toàn cho ứng dụng RAG đa người dùng"
+date: 2026-06-22
+weight: 2
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-# SESSION POLICIES TRONG AMAZON EKS POD IDENTITY
+### [SECURITY/Architecture] KIỂM SOÁT TRUY CẬP AN TOÀN CHO ỨNG DỤNG RAG ĐA NGƯỜI DÙNG VỚI AMAZON BEDROCK VÀ VERIFIED PERMISSIONS
 
-Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+Chào các anh chị em cộng đồng,
 
-Các điểm chính cần nắm:
+Xây dựng các ứng dụng Generative AI nội bộ sử dụng kỹ thuật RAG (Retrieval-Augmented Generation) luôn là một chủ đề hấp dẫn nhưng đầy thách thức về mặt kiến trúc và bảo mật. Chúng ta đều biết việc cá nhân hóa quyền truy cập tài liệu là bắt buộc (ví dụ: nhân sự phòng HR chỉ được xem tài liệu HR, Sales xem tài liệu Sales), nhưng việc triển khai luồng phân quyền này vào thực tế hạ tầng lại không hề đơn giản.
 
-* Session policy là một IAM policy inline được chỉ định khi tạo hoặc cập nhật Pod Identity association.
-* Quyền hiệu quả = intersection (giao) giữa permissions của IAM role và session policy → session policy chỉ có thể thu hẹp, không thể mở rộng quyền.
-* Giúp tránh tình trạng over-permissioning khi reuse chung một IAM role cho nhiều workloads có nhu cầu khác nhau.
-* Hỗ trợ cả same-account và cross-account (qua IAM role chaining).
-* Giảm đáng kể số lượng IAM roles cần quản lý, tránh chạm giới hạn quota IAM trong cluster lớn.
-* Cấu hình dễ dàng qua AWS Management Console, AWS CLI hoặc AWS SDK khi tạo association giữa Kubernetes ServiceAccount và IAM role.
+Nhiều hệ thống hiện nay phải chọn cách tạo ra các Knowledge Base (cơ sở tri thức) riêng biệt cho từng phòng ban. Rào cản lớn nhất của cách làm này là hạ tầng bị nhân bản một cách cồng kềnh, chi phí duy trì tăng vọt và kéo theo cơn ác mộng về quản lý khi tổ chức có sự thay đổi.
 
-Tính năng này đặc biệt hữu ích khi bạn có nhiều ứng dụng chạy trên cùng một IAM role nhưng cần giới hạn quyền khác nhau (ví dụ: một pod chỉ đọc S3 bucket cụ thể, pod khác chỉ gọi một số API nhất định).
+Gần đây, khi nghiên cứu các mẫu kiến trúc mạng đám mây và bảo mật dữ liệu, mình muốn giới thiệu với mọi người một hướng tiếp cận giúp giải quyết triệt để nút thắt này. Thay vì chia cắt vật lý, chúng ta có thể sử dụng một Knowledge Base duy nhất và kiểm soát quyền truy cập bằng sự kết hợp giữa **Amazon Bedrock** và **Amazon Verified Permissions**.
 
-...Hình ảnh...
+#### Kiến Trúc Bảo Mật Đa Lớp (Defense-in-Depth)
+Ý tưởng cốt lõi của mẫu kiến trúc này là tách biệt hoàn toàn logic ủy quyền ra khỏi mã nguồn ứng dụng và áp dụng tự động hóa bảo mật ở hai tầng độc lập:
 
-...Link...
+* **1. Tầng 1 (API Access) - Chặn ngay từ cửa:** Khi người dùng gửi request, hệ thống không đi thẳng vào database. Amazon API Gateway sẽ gọi một Lambda Authorizer để kiểm tra với Verified Permissions xem người dùng này (dựa trên nhóm trong JWT token) có quyền gọi API hay không. Nếu không hợp lệ, request bị từ chối ngay lập tức, giảm thiểu rủi ro bị tấn công trực diện.
+* **2. Tầng 2 (Document Access) - Bộ lọc dữ liệu tận gốc:** Nếu vượt qua được cửa đầu tiên, một Middleware Lambda sẽ tiếp tục gọi Verified Permissions lần thứ hai để xác định chính xác người dùng được phép xem tài liệu của những phòng ban nào. Từ quyết định này, hệ thống tự động tạo ra một bộ lọc (Metadata Filter) và truyền thẳng vào API `RetrieveAndGenerate` của Amazon Bedrock. Nhờ vậy, mô hình ngôn ngữ (LLM) chỉ có thể tìm kiếm và tạo ra câu trả lời dựa trên những tài liệu đã được khoanh vùng nghiêm ngặt. Dù Tầng 1 có vô tình bị cấu hình sai, Tầng 2 vẫn chặn đứng nguy cơ rò rỉ dữ liệu chéo.
 
-...Hướng dẫn...
+#### Quản Lý Chính Sách Tập Trung Bằng Cedar
+Toàn bộ logic phân quyền được viết bằng ngôn ngữ **Cedar** trực quan. Khi cần cấp quyền cho một phòng ban mới hoặc một nhân sự cấp cao, chúng ta chỉ cần cập nhật policy trên console mà không cần viết lại mã hay redeploy ứng dụng. Hệ thống tuân thủ chặt chẽ nguyên tắc "Deny-by-default", tự động đóng băng truy cập nếu service check quyền bị lỗi.
+
+Hướng tiếp cận này giúp các tổ chức có thể nhanh chóng triển khai một ứng dụng GenAI an toàn, phục vụ hàng chục phòng ban mà vẫn tiết kiệm tối đa chi phí vận hành.
+
+Để hiểu rõ hơn về cách triển khai thực tế, bài viết trên AWS Architecture Blog đã phân tích rất chất lượng mẫu kiến trúc này. Nếu các anh chị em đang có ý định xây dựng hoặc nâng cấp hệ thống AI nội bộ, mình khuyên mọi người nên dành chút thời gian đọc bài viết gốc để nắm bắt các khía cạnh kỹ thuật sâu hơn.
+
+Rất mong bài chia sẻ này mang lại góc nhìn hữu ích cho các anh chị em làm Cloud Networking và System Architecture.
+
+---
+**Nguồn tham khảo:**
+* **Link bài gốc:** [Secure multi-tenant RAG with Amazon Bedrock and Verified Permissions](https://aws.amazon.com/vi/blogs/architecture/secure-multi-tenant-rag-with-amazon-bedrock-and-verified-permissions/)
+* **Link bài đăng trên group:** [Cộng đồng AWS Study Group FCAJ](https://www.facebook.com/groups/660548818043427/?multi_permalinks=2202713613826932)

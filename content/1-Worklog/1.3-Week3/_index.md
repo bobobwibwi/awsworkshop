@@ -1,57 +1,37 @@
 ---
-title: "Week 3 Worklog"
-date: 2024-01-01
-weight: 1
+title: "Week 3 Worklog - Module 3: Advanced Amazon VPC Networking"
+date: 2026-05-01
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+### Weekly Theme
 
-### Week 3 Objectives:
+Build a customized virtual network architecture, control routing traffic, and allow Private Subnets to communicate securely with the Internet.
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+### Weekly Objectives
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+* Build a Custom VPC by dividing IP ranges (CIDR blocks).
+* Allocate Route Tables for Public and Private Subnets.
+* Deploy a NAT Gateway to securely pull system updates.
 
+### Task Schedule
 
-### Week 3 Achievements:
+| Date | Day | Task Description | Lab / Project |
+|---|---|---|---|
+| 04/05/2026 | Monday | Perform IP address planning. Initialize a Custom VPC containing both Public and Private Subnets. | [Lab 000006 - Build Advanced VPC](https://000006.awsstudygroup.com) |
+| 05/05/2026 | Tuesday | Configure an Internet Gateway (IGW). Edit the Route Table for the Public Subnet to route traffic to the IGW. | [Lab 000006 - Build Advanced VPC](https://000006.awsstudygroup.com) |
+| 06/05/2026 | Wednesday | Create EC2 instances acting as Frontend (Public) and Backend (Private) to test network tiering. | Cloud Lab Environment |
+| 07/05/2026 | Thursday | Allocate an Elastic IP. Create a NAT Gateway in the Public Subnet and point the Private Subnet's Route Table to the NAT. | [Lab 000007 - NAT Gateway & Routing](https://000007.awsstudygroup.com) |
+| 08/05/2026 | Friday | Troubleshooting: Run ping tests from the Backend instance to the Internet via NAT Gateway, trace route traffic. | Troubleshooting |
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+### Expected Outcomes
 
-* Successfully created and configured an AWS Free Tier account.
+* Complete an isolated network infrastructure lab with high security.
+* Ensure internal servers remain completely invisible to the Internet while still being able to pull patches.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+### Week 3 References
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* [Lab 000006 - Design advanced virtual network Amazon VPC](https://000006.awsstudygroup.com)
+* [Lab 000007 - Set up secure routing with NAT Gateway](https://000007.awsstudygroup.com)

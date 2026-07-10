@@ -1,59 +1,37 @@
 ---
-title: "Worklog Tuần 8"
-date: 2024-01-01
-weight: 1
+title: "Nhật ký tuần 8 - Ôn tập chặng 1: Hạ tầng Mạng & Điện toán"
+date: 2026-06-05
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Chủ đề tuần
 
-### Mục tiêu tuần 8:
+Hệ thống hóa lại các dịch vụ cốt lõi (Core Services) của AWS bao gồm Compute, Network và Security để củng cố nền tảng trước khi làm đồ án.
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Mục tiêu tuần
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+* Ôn tập lại kiến thức về IAM, EC2, EBS và VPC.
+* Làm lại các bài lab quan trọng, thao tác trơn tru không cần nhìn hướng dẫn.
+* Thực hành kỹ năng khắc phục sự cố mạng (Network Troubleshooting).
 
+### Lịch công việc
 
-### Kết quả đạt được tuần 8:
+| Ngày | Thứ | Nội dung công việc | Lab / Dự án |
+|---|---|---|---|
+| 08/06/2026 | Thứ 2 | Ôn tập IAM & EC2: Kiểm tra lại các nguyên tắc phân quyền Least Privilege, tạo lại EC2 với User Data script. | Ôn tập Lab 1 & 2 |
+| 09/06/2026 | Thứ 3 | Tự thiết lập lại môi trường AWS cloud laboratory chuyên biệt bao gồm đầy đủ VPC, các EC2 instance và NAT Gateway. | Thực hành Kiến trúc |
+| 10/06/2026 | Thứ 4 | Rà soát cấu hình Route Tables để đảm bảo luồng traffic đi đúng hướng và an toàn tuyệt đối qua mạng Private. | Ôn tập Lab 4 |
+| 11/06/2026 | Thứ 5 | Tự tạo các kịch bản lỗi mạng (ví dụ: cấu hình sai Security Group, chặn Port) và tiến hành điều tra, fix lỗi. | Troubleshooting |
+| 12/06/2026 | Thứ 6 | Tổng hợp các lỗi thường gặp trong quá trình cấu hình hạ tầng, ghi chú vào tài liệu cá nhân để làm kinh nghiệm. | Tài liệu hóa |
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+### Kết quả kỳ vọng
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Khỏa lấp toàn bộ các lỗ hổng kiến thức cơ bản về Network và Compute.
+* Tự tin xử lý các lỗi kết nối mạng (Timeout, Connection Refused) bằng cách rà soát Security Group và Route Table.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+### Tham chiếu tuần 8
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Lộ trình ôn tập First Cloud AI Journey.
+* Các sơ đồ kiến trúc cá nhân trên draw.io.
