@@ -1,46 +1,31 @@
 ---
 title: "Các events đã tham gia"
-date: 2024-01-01
+date: 2026-07-10
 weight: 4
 chapter: false
 pre: " <b> 4. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+Trong quá trình thực tập, em đã tham gia 2 events, với mỗi event là một trải nghiệm đáng nhớ với những kiến thức mới, hay và bổ ích, cùng với đó là những món quà và những khoảnh khắc rất tuyệt vời.
 
-> Trong phần này, các bạn cần liệt kê và mô tả chi tiết các sự kiện (event) mà mình đã tham gia trong suốt quá trình thực tập hoặc làm việc. 
-> 
-> Mỗi sự kiện nên được trình bày theo định dạng Event 1, Event 2, Event 3…, kèm theo các thông tin:
-> * Tên sự kiện
-> * Thời gian tổ chức
-> * Địa điểm (nếu có)
-> * Vai trò của bạn trong sự kiện (người tham dự, hỗ trợ tổ chức, diễn giả, v.v.)
-> * Mô tả ngắn gọn nội dung và hoạt động chính trong sự kiện
-> * Kết quả hoặc giá trị đạt được (bài học, kỹ năng mới, đóng góp cho nhóm/dự án)
-> * Việc liệt kê này giúp thể hiện rõ sự tham gia thực tế của bạn, cũng như các kỹ năng mềm và kinh nghiệm bạn đã tích lũy qua từng sự kiện.
+### [Event 1](4.1-event1/)
+&emsp;**Tên sự kiện:** Prompt Engineering, Sơ đồ tư duy AI & Phương pháp BMAD
 
+&emsp;**Thời gian:** Ngày 09/05/2026
 
-Trong quá trình thực tập, em đã tham gia 2 events, với mỗi event là một trải nghiệm đáng nhớ với những kiến thức mới, hay và bổ ích, cùng với đó là nhứng món quà và những khoảnh khắc rất tuyệt vời.
+&emsp;**Địa điểm:** Tầng 26, Tòa nhà Bitexco Financial Tower, Phường Sài Gòn, TP.Hồ Chí Minh
 
-### [Event 1](4.1-Event1/)
-&emsp;**Tên sự kiện:** GenAI-powered App-DB Modernization workshop
+&emsp;**Vai trò trong sự kiện:** Người tham dự
 
-&emsp;**Thời gian:** 09:00 ngày 13/08/2025
+&emsp;**Mô tả và giá trị đạt được:** Sự kiện tập trung vào ba chủ đề chính: kỹ thuật Automated Prompt Engineering giúp tối ưu hóa chất lượng đầu ra của LLM, ứng dụng sơ đồ tư duy (mô hình KFC) để tương tác AI hiệu quả, và làm quen với khung phát triển BMAD. Qua sự kiện, em đã học được cách viết prompt chuẩn xác, hiểu về nguyên lý hoạt động của token và các kỹ thuật nâng cao như CoT, RAG, đồng thời nắm bắt cách tích hợp AI trên nền tảng kiến trúc AWS Serverless.
 
-&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh
+### [Event 2](4.2-event2/)
+&emsp;**Tên sự kiện:** AWS Vietnam Community Day 2026
 
-&emsp;**Vai trò trong sự kiện:** Người tham dự 
+&emsp;**Thời gian:** Ngày 23/05/2026
 
+&emsp;**Địa điểm:** Tầng 26, Tòa nhà Bitexco Financial Tower, Phường Sài Gòn, TP.Hồ Chí Minh
 
+&emsp;**Vai trò trong sự kiện:** Người tham dự
 
-### [Event 2](4.2-Event2/)
-&emsp;**Tên sự kiện:** GenAI-powered App-DB Modernization workshop
-
-&emsp;**Thời gian:** 09:00 ngày 13/08/2025
-
-&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh
-
-&emsp;**Vai trò trong sự kiện:** Người tham dự 
-
+&emsp;**Mô tả và giá trị đạt được:** Sự kiện quy tụ các chuyên gia chia sẻ kinh nghiệm thực chiến về xây dựng hệ thống AI và hạ tầng cloud trên AWS. Các chủ đề đa dạng từ quản lý context cho AI (Second Brain), hệ thống multi-agent cấp doanh nghiệp, đến tối ưu hạ tầng với Amazon CloudFront và bài học thực tế từ hackathon. Sự kiện giúp em nhận thức sâu sắc rằng AI chỉ thực sự tạo ra giá trị bền vững khi được kết hợp với tư duy sản phẩm, kiến trúc hệ thống vững chắc và rào chắn bảo mật nghiêm ngặt trên đám mây.
