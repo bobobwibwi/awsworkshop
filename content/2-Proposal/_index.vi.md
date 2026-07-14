@@ -312,3 +312,7 @@ Toàn bộ hoạt động của hệ thống được theo dõi thông qua Amazo
 #### Khả năng mở rộng trong tương lai
 
 Kiến trúc được thiết kế theo hướng tách biệt giữa giao diện, tầng xử lý nghiệp vụ và tầng dữ liệu, giúp dễ dàng mở rộng các chức năng mới như thống kê quá trình ứng tuyển, phân tích dữ liệu, tích hợp AI hỗ trợ tối ưu CV, gợi ý việc làm hoặc xây dựng hệ thống phân tích hành vi người dùng mà không cần thay đổi kiến trúc tổng thể.
+
+### Video Demo ứng dụng
+<br>
+<iframe src="https://drive.google.com/file/d/1rpFoRG4gLQyESjx8-W7koH7yP1yqtEl7/preview" width="100%" height="480" allow="autoplay" frameborder="0" allowfullscreen></iframe>

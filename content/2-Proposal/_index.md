@@ -314,3 +314,7 @@ All system activity is monitored through Amazon CloudWatch, CloudTrail, and SNS 
 #### Future Scalability
 
 The architecture is designed to separate the interface, business logic layer, and data layer, making it easy to expand with new functionalities such as application process statistics, data analysis, AI integration to optimize CVs, job suggestions, or building a user behavior analysis system without changing the overall architecture.
+
+### Application Demo Video
+<br>
+<iframe src="https://drive.google.com/file/d/1rpFoRG4gLQyESjx8-W7koH7yP1yqtEl7/preview" width="100%" height="480" allow="autoplay" frameborder="0" allowfullscreen></iframe>
